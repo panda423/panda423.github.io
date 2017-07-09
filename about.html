@@ -13,6 +13,9 @@
     <link href="assets/css/ct-paper.css" rel="stylesheet"/>
     <link href="assets/css/demo.css" rel="stylesheet" />
     <link href="assets/css/examples.css" rel="stylesheet" />
+     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
 
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -23,6 +26,39 @@
         .drag{
             height: 500px;
         }
+        row, col, container{
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+    .album{
+        width:350px;
+        height: 250px;
+        
+        background-repeat: no-repeat;
+
+    }
+    .grid>img{
+        width: auto;
+        height: auto;
+    }
+    .first{
+        background-image: url("assets/1.jpg");
+    }
+    .second{
+        background-image: url("assets/2.jpg");
+    }
+    .third{
+        background-image: url("assets/5.jpg");
+    }
+    .fourth{
+        background-image: url("assets/4.jpg");
+    }
+    .container {
+      position: relative;
+      width:100%;
+    }
+
     </style>
 </head>
 <body>
@@ -76,6 +112,25 @@ When it comes to engineering students, studies have shown that students experien
 </p>
                 </div>
             </div>
+
+<!-- Grid -->
+    <div class="container grid">
+        <div class="controll">
+            <div class="row">
+              <div class="album col first try"></div>
+              <div class="album col  second"></div>
+              <div class="album col  third"></div>
+              <div class="album col  fourth"></div>
+
+            </div>
+           
+
+            </div>
+        </div>
+    </div>
+
+
+            
             <div class="section landing-section" style="color:#4B5578">
                 <div class="container">
                     <div class="row">
@@ -148,5 +203,19 @@ When it comes to engineering students, studies have shown that students experien
 <script src="assets/js/bootstrap-datepicker.js"></script>
 
 <script src="assets/js/ct-paper.js"></script>
+<!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+    <script type="text/javascript">
+    window.sr = ScrollReveal();
+        sr.reveal('.first');
+        sr.reveal('.second');
+        sr.reveal('.third');
+        sr.reveal('.fourth');
+        sr.reveal('.fifth');
+    </script>
 
 </html>
